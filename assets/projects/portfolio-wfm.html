@@ -9,7 +9,6 @@
         .project-container {
             display: flex;
             background: rgba(0, 71, 187, .9);
-            width: max-content;
             align-items: center;
             width: 370.4px !important;
             height: 277.8px !important;
@@ -20,6 +19,7 @@
             padding-right: 5px;
             overflow: hidden;
             border-right: 2px solid white;
+            flex: 1;
         }
 
         .project-name {
@@ -27,12 +27,14 @@
             color: white;
             font-weight: bold;
             word-wrap: break-word;
+            flex: 1;
+            padding-right: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div class="size project-container">
+    <div class="project-container">
         <img src="../img/R1_logo.png" alt="Company Logo" class="logo">
         <div class="project-name">Work Flow Management Acute and Physician Business</div>
     </div>
