@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Logo and Project Name</title>
+    <style>
+        .project-container {
+            background: rgba(0, 71, 187, .9);
+            /* width: 370.4px !important;
+            height: 277.8px !important; */
+            width: 370px;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .project-logo {
+            overflow: hidden;
+            float: left;
+            width: 70%;
+            height: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .project-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .project-name {
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            word-wrap: break-word;
+            float: right;
+            width: 30%;
+            border-left: 2px solid white;
+            padding-left: 18px;
+            padding-right: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project-container">
+        <div class="project-logo">
+            <img src="../img/R1_logo_square.png" alt="Company Logo" />
+        </div>
+        <div class="project-name">&emsp;&emsp;&emsp;&emsp;&emsp;Work&emsp;&emsp;&emsp; Flow Management Acute and
+            Physician Business&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        </div>
+    </div>
+</body>
+
+</html>
