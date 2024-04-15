@@ -30,6 +30,7 @@
             height: 100%;
             padding-top: 5px;
             padding-bottom: 5px;
+            margin-right: 10px;
         }
 
         .project-logo img {
@@ -45,6 +46,7 @@
             word-wrap: break-word;
             float: right;
             width: 30%;
+            /* 33% for Account Summarization project name*/
             border-left: 2px solid white;
             padding-left: 18px;
             padding-right: 5px;
@@ -58,10 +60,31 @@
         <div class="project-logo">
             <img src="../img/R1_logo_square.png" alt="Company Logo" />
         </div>
-        <div class="project-name">&emsp;&emsp;&emsp;&emsp;&emsp;Work&emsp;&emsp;&emsp; Flow Management Acute and
-            Physician Business&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <div class="project-name">
+            &emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using
+            LLM&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         </div>
     </div>
+    <br />
+
+    <button id="generateImage" onclick="generateImage();">Generate Image</button>
+    <br /><br />
+
+    <div id="showGeneratedImage"></div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+    <script type="text/javascript">
+        const generateImage = () => html2canvas(document.querySelector('div.project-container')).then(canvas => {
+            document.getElementById('showGeneratedImage').appendChild(canvas)
+        });
+
+        let projectNames = [
+            '&emsp;&emsp;&emsp;&emsp;&emsp;Work&emsp;&emsp;&emsp; Flow Management Acute and Physician Business & emsp;& emsp;& emsp;& emsp;& emsp;& emsp;& emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;R1&emsp;&emsp;&emsp;&emsp;Decision DotNetNuke Removal&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using LLM & emsp;& emsp;& emsp;& emsp;& emsp;& emsp;& emsp; '
+        ];
+    </script>
 </body>
 
 </html>

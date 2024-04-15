@@ -6,4 +6,4 @@ Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
 
 
-HTML to Image Converter: https://htmlcsstoimage.com/
+HTML to Image Converter: https://html2canvas.hertzen.com
