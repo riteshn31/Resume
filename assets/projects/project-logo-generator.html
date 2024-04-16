@@ -56,7 +56,11 @@
 </head>
 
 <body>
-    <div id="1">
+    <div id="generateAllLogos">
+        <button id="generateAllLogo" onclick="generateAllLogoImages();">Generate All Logos</button>
+    </div>
+    <br>
+    <!-- <div id="1">
         <div class="project-container">
             <div class="project-logo">
                 <img src="../img/R1_logo_square.png" alt="Project Logo" />
@@ -70,68 +74,63 @@
         </div>
         <br />
 
-        <button id="generateImage" onclick="generateImage();">Generate Image</button>
+        <button id="generateImage" onclick="generateLogoImage();">Generate Image</button>
         <br /><br />
 
         <div id="showGeneratedImage"></div>
-    </div>
+    </div> -->
 
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
     <script type="text/javascript">
-        const generateImage = () => html2canvas(document.querySelector('div.project-container')).then(canvas => {
-            document.getElementById('showGeneratedImage').appendChild(canvas)
-        });
+        function generateAllLogoImages() {
+            for (let index = 1; index <= projectNames.length; index++) {
+                generateLogoImage(index);
+            }
+        }
 
-        // const generateImage = (index) => html2canvas(document.getElementById('project_' + index.toString())).then(canvas => {
-        //     document.getElementById('showGeneratedImage_' + index.toString()).appendChild(canvas)
-        // });
+        function generateLogoImage(index) {
+            html2canvas(document.getElementById('project_' + index.toString()), { scale: 3 }).then(canvas => {
+                document.getElementById('showImage_' + index.toString()).appendChild(canvas)
+            })
+        };
 
         let projectNames = [
             '&emsp;&emsp;&emsp;&emsp;&emsp;Work&emsp;&emsp;&emsp; Flow Management Acute&emsp;&emsp; and Physician Business &emsp;&emsp;&emsp;&emsp;&emsp;',
             '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;R1&emsp;&emsp;&emsp;&emsp;Decision DotNetNuke Removal&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;',
-            '&emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using LLM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using &emsp;&emsp;LLM &emsp;&emsp;&emsp;&emsp;&emsp;',
             '&emsp;&emsp;&emsp;&emsp;&emsp;Data Archival for Work Flow Management Acute and Physician Business&emsp;&emsp;&emsp;',
             '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; PHI & PII Data Scrubbing from&emsp;&emsp;&emsp;&emsp; Lower Environments &emsp;&emsp;&emsp;&emsp;&emsp;',
             '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cash &emsp;&emsp;Posting Reconciliation Solution&emsp;&nbsp; &emsp;( R1 &emsp;&emsp; Post ) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;'
         ];
 
-        // let index = 1;
-        // let pName = document.querySelector('div.project-name');
-        // projectNames.forEach(name => {
-        //     let br = document.createElement('br');
+        let index = 1;
+        projectNames.forEach(name => {
+            let html = `
+            <div id="project_${index}" class="project-container">
+                <div class="project-logo">
+                    <img src="../img/R1_logo_square.png" alt="Project Logo">
+                </div>
+                <div class="project-name">${name}</div>
+            </div>
+            <br>
+            <button id="generateImage_${index}" onclick="generateLogoImage(${index});">Generate Image for Logo ${index}</button>
+            <br><br>
+            <div id="showImage_${index}"></div>
+            <br>`
 
-        //     let img = document.createElement('img');
-        //     img.src = '../img/R1_logo_square.png';
-        //     img.alt = 'Project Logo';
+            let wrapper = document.createElement('div');
+            wrapper.id = 'wrapper_' + index.toString();
+            wrapper.innerHTML = html;
 
-        //     let pLogo = document.createElement('div');
-        //     pContainer.className = 'project-logo';
-        //     pLogo.appendChild(img);
+            document.body.appendChild(wrapper);
 
-        //     let pName = document.createElement('div');
-        //     pName.className = 'project-name';
-        //     pName.innerHTML = name;
+            if (name.includes('History Summarization')) {
+                document.querySelector(`#project_3 div.project-name`).style = 'width: 33%';
+            }
 
-        //     let gButton = document.createElement('button');
-        //     gButton.id = 'generateImage_' + index.toString();
-        //     gButton.textContent = 'Generate Image for Logo ' + index.toString();
-        //     gButton.addEventListener('click', function () {
-        //         generateImage(index);
-        //     });
-
-        //     let pContainer = document.createElement('div');
-        //     pContainer.id = 'project_' + index.toString();
-        //     pContainer.className = 'project-container';
-        //     pContainer.appendChild(pLogo);
-        //     pContainer.appendChild(pName);
-        //     pContainer.appendChild(br);
-        //     pContainer.appendChild(gButton);
-
-        //     document.body.appendChild(pContainer);
-
-        //     index++;
-        // });
+            index++;
+        });
     </script>
 </body>
 
