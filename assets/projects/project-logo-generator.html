@@ -56,21 +56,25 @@
 </head>
 
 <body>
-    <div class="project-container">
-        <div class="project-logo">
-            <img src="../img/R1_logo_square.png" alt="Company Logo" />
+    <div id="1">
+        <div class="project-container">
+            <div class="project-logo">
+                <img src="../img/R1_logo_square.png" alt="Project Logo" />
+            </div>
+            <div class="project-name">
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cash &emsp;&emsp;Posting Reconciliation Solution&emsp;&nbsp; &emsp;(
+                R1
+                &emsp;&emsp;
+                Post ) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            </div>
         </div>
-        <div class="project-name">
-            &emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using
-            LLM&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-        </div>
+        <br />
+
+        <button id="generateImage" onclick="generateImage();">Generate Image</button>
+        <br /><br />
+
+        <div id="showGeneratedImage"></div>
     </div>
-    <br />
-
-    <button id="generateImage" onclick="generateImage();">Generate Image</button>
-    <br /><br />
-
-    <div id="showGeneratedImage"></div>
 
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
@@ -79,11 +83,55 @@
             document.getElementById('showGeneratedImage').appendChild(canvas)
         });
 
+        // const generateImage = (index) => html2canvas(document.getElementById('project_' + index.toString())).then(canvas => {
+        //     document.getElementById('showGeneratedImage_' + index.toString()).appendChild(canvas)
+        // });
+
         let projectNames = [
-            '&emsp;&emsp;&emsp;&emsp;&emsp;Work&emsp;&emsp;&emsp; Flow Management Acute and Physician Business & emsp;& emsp;& emsp;& emsp;& emsp;& emsp;& emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;Work&emsp;&emsp;&emsp; Flow Management Acute&emsp;&emsp; and Physician Business &emsp;&emsp;&emsp;&emsp;&emsp;',
             '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;R1&emsp;&emsp;&emsp;&emsp;Decision DotNetNuke Removal&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;',
-            '&emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using LLM & emsp;& emsp;& emsp;& emsp;& emsp;& emsp;& emsp; '
+            '&emsp;&emsp;&emsp;&emsp;&emsp;Account’s&emsp; Notes&emsp; History Summarization using LLM &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;Data Archival for Work Flow Management Acute and Physician Business&emsp;&emsp;&emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; PHI & PII Data Scrubbing from&emsp;&emsp;&emsp;&emsp; Lower Environments &emsp;&emsp;&emsp;&emsp;&emsp;',
+            '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cash &emsp;&emsp;Posting Reconciliation Solution&emsp;&nbsp; &emsp;( R1 &emsp;&emsp; Post ) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;'
         ];
+
+        // let index = 1;
+        // let pName = document.querySelector('div.project-name');
+        // projectNames.forEach(name => {
+        //     let br = document.createElement('br');
+
+        //     let img = document.createElement('img');
+        //     img.src = '../img/R1_logo_square.png';
+        //     img.alt = 'Project Logo';
+
+        //     let pLogo = document.createElement('div');
+        //     pContainer.className = 'project-logo';
+        //     pLogo.appendChild(img);
+
+        //     let pName = document.createElement('div');
+        //     pName.className = 'project-name';
+        //     pName.innerHTML = name;
+
+        //     let gButton = document.createElement('button');
+        //     gButton.id = 'generateImage_' + index.toString();
+        //     gButton.textContent = 'Generate Image for Logo ' + index.toString();
+        //     gButton.addEventListener('click', function () {
+        //         generateImage(index);
+        //     });
+
+        //     let pContainer = document.createElement('div');
+        //     pContainer.id = 'project_' + index.toString();
+        //     pContainer.className = 'project-container';
+        //     pContainer.appendChild(pLogo);
+        //     pContainer.appendChild(pName);
+        //     pContainer.appendChild(br);
+        //     pContainer.appendChild(gButton);
+
+        //     document.body.appendChild(pContainer);
+
+        //     index++;
+        // });
     </script>
 </body>
 
