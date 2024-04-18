@@ -1,0 +1,12 @@
+h x v
+1280 x 561px	wfm
+952 x 495		wfm2
+1024 x 720 		dnn
+2048 x 1152		summary
+1280 x 723		scrub
+2000 x 1000 	archival
+671 x 455		post
+1024 x 1024 	fare
+1024 x 1024		pnr
+1024 x 1024		routes
+500 x 333		web
