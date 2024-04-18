@@ -1153,3 +1153,13 @@ section {
 .gslide-title {
   text-align: center;
 }
+
+.portfolio-image {
+  width: 764.8px !important;
+  height: 384.2px !important;
+}
+
+.tech-padding li>i {
+  color: #149ddd;
+  line-height: 0;
+}
