@@ -13,7 +13,13 @@ $('.php-email-form').on('submit', function (event) {
         processData: false // no need to parse formData to string
     }).done(function () {
         $('.sent-message').show();
-    }).fail(function (error) {
+        setTimeout(function () {
+            $('.sent-message').hide();
+        }, 20000);
+    }).fail(function () {
         $('.error-message').show();
+        setTimeout(function () {
+            $('.error-message').hide();
+        }, 20000);
     });
 });
