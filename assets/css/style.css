@@ -1164,3 +1164,30 @@ section {
   color: #149ddd;
   line-height: 0;
 }
+
+.portfolio-nav-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none !important;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.previous-page {
+  color: #149ddd;
+  z-index: 996;
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+.next-page {
+  color: #149ddd;
+  z-index: 996;
+  margin-left: auto;
+  padding-right: 10px;
+}

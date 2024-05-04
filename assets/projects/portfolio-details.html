@@ -181,6 +181,20 @@
             </div>
           </div>
         </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-12">
+            <div class="portfolio-nav-button">
+              <a href="" class="previous-page align-items-center justify-content-center active">
+                <i class="bi bi-arrow-left" title="Previous Portfolio"></i>
+              </a>
+              <a href="" class="next-page align-items-center justify-content-center active">
+                <i class="bi bi-arrow-right" title="Next Portfolio"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
     <!-- End Portfolio Details Section -->
@@ -216,6 +230,7 @@
   <!-- <script src="../vendor/php-email-form/validate.js"></script> -->
   <!-- Template Main JS File -->
   <script src="../js/main.js"></script>
+  <script src="../js/portfolioNavigator.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -269,6 +284,9 @@
       }
     }
 
+    document.addEventListener('DOMContentLoaded', () => {
+      let navigator = new PortfolioNavigator(data);
+    });
   </script>
 </body>
 
