@@ -19,7 +19,6 @@ $('.php-email-form').on('submit', function (event) {
         }, 20000);
     }).fail(function () {
         $('.error-message').show();
-        clearFormFields();
         setTimeout(function () {
             $('.error-message').hide();
         }, 20000);
