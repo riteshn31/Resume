@@ -13,13 +13,22 @@ $('.php-email-form').on('submit', function (event) {
         processData: false // no need to parse formData to string
     }).done(function () {
         $('.sent-message').show();
+        clearFormFields();
         setTimeout(function () {
             $('.sent-message').hide();
         }, 20000);
     }).fail(function () {
         $('.error-message').show();
+        clearFormFields();
         setTimeout(function () {
             $('.error-message').hide();
         }, 20000);
     });
 });
+
+function clearFormFields() {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+}
