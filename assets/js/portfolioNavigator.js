@@ -3,30 +3,34 @@ class PortfolioNavigator {
         this.data = data;
         this.keys = Object.keys(data);
         this.currentPortfolioIndex = this.getCurrentPortfolioIndex();
-        this.previousButton = document.querySelector('.previous-page');
-        this.nextButton = document.querySelector('.next-page');
+        this.previousButtons = document.querySelectorAll('.previous-page');
+        this.nextButtons = document.querySelectorAll('.next-page');
 
         this.init();
     }
 
     getCurrentPortfolioIndex() {
-        const queryParams = new URLSearchParams(window.location.search);
-        const currentPortfolio = queryParams.get('name');
+        let queryParams = new URLSearchParams(window.location.search);
+        let currentPortfolio = queryParams.get('name');
         return this.keys.indexOf(currentPortfolio);
     }
 
     updateButtonVisibility() {
-        if (this.currentPortfolioIndex === 0) {
-            this.previousButton.style.display = 'none';
-        } else {
-            this.previousButton.style.display = 'block';
-        }
+        this.previousButtons.forEach(button => {
+            if (this.currentPortfolioIndex === 0) {
+                button.style.display = 'none';
+            } else {
+                button.style.display = 'block';
+            }
+        });
 
-        if (this.currentPortfolioIndex === this.keys.length - 1) {
-            this.nextButton.style.display = 'none';
-        } else {
-            this.nextButton.style.display = 'block';
-        }
+        this.nextButtons.forEach(button => {
+            if (this.currentPortfolioIndex === this.keys.length - 1) {
+                button.style.display = 'none';
+            } else {
+                button.style.display = 'block';
+            }
+        });
     }
 
     navigateToPortfolio(portfolioName) {
@@ -36,20 +40,24 @@ class PortfolioNavigator {
     init() {
         this.updateButtonVisibility();
 
-        this.previousButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (this.currentPortfolioIndex > 0) {
-                const previousPortfolio = this.keys[this.currentPortfolioIndex - 1];
-                this.navigateToPortfolio(previousPortfolio);
-            }
+        this.previousButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (this.currentPortfolioIndex > 0) {
+                    const previousPortfolio = this.keys[this.currentPortfolioIndex - 1];
+                    this.navigateToPortfolio(previousPortfolio);
+                }
+            });
         });
 
-        this.nextButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (this.currentPortfolioIndex < this.keys.length - 1) {
-                const nextPortfolio = this.keys[this.currentPortfolioIndex + 1];
-                this.navigateToPortfolio(nextPortfolio);
-            }
+        this.nextButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (this.currentPortfolioIndex < this.keys.length - 1) {
+                    const nextPortfolio = this.keys[this.currentPortfolioIndex + 1];
+                    this.navigateToPortfolio(nextPortfolio);
+                }
+            });
         });
     }
 }
