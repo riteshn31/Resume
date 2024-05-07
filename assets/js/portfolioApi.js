@@ -129,7 +129,7 @@ const data =
         portfolioURL: `-- NA --`,
         teamSize: `3`,
         role: `Software Engineer II`,
-        productOverview: `${tsCompanyOverview}`,
+        productOverview: `${tsCompanyOverview} The Flight Fare Availability is a dynamic tool designed to simplify the process of checking flight fares on specific dates. Crafted using C# programming language, this innovative project prioritizes cache performance optimization and cost reduction for Innovata. <br><br> With its user-friendly interface and robust functionality, the Flight Fare Availability Calendar offers a seamless experience for users to effortlessly access real-time flight fare information. By integrating with airline websites, it ensures accuracy and reliability, while also contributing to significant cost savings for Innovata. <br><br> Experience the convenience and efficiency of the Flight Fare Availability Calendar as it revolutionizes the way flight fares are checked and managed.`,
         achievements: `TripStack is a leading B2B travel technology company that provides unique flight content through Virtual Interlining, enabling customers to travel with multiple carriers in a single itinerary.`,
         techStack: [`.NET Core`, `Microsoft Azure Cloud`, `Web API`, `HTML5/CSS3`, `React`, `Typescript`, `C#`, `MediatR & CQRS Design Pattern`, `Microsoft SQL Server`, `XUnit`, `SpecFlow`, `Selenium`],
     },
