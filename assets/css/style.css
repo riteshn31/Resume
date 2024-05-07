@@ -1160,6 +1160,12 @@ section {
   height: 384.2px !important;
 }
 
+@media (max-width: 850px) {
+  .portfolio-image {
+    width: 100% !important;
+  }
+}
+
 .tech-padding li>i {
   color: #149ddd;
   line-height: 0;
