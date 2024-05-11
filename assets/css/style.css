@@ -425,7 +425,7 @@ section {
 # Akills
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  height: auto;
   display: block;
   background: none;
   border-radius: 0;
@@ -906,7 +906,9 @@ section {
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contact .info .phone:hover i,
+.contact .info .whatsapp:hover i,
+.contact .info .linkedin:hover i {
   background: #149ddd;
   color: #fff;
 }
