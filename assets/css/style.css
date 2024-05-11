@@ -1165,6 +1165,7 @@ section {
 @media (max-width: 850px) {
   .portfolio-image {
     width: 100% !important;
+    height: auto !important;
   }
 }
 
