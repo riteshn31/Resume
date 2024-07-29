@@ -1,0 +1,150 @@
+% Compiler: pdfLatex
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Define custom colors
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Define custom commands for section headings
+\newcommand{\heading}[1]{\textbf{\large #1}}
+\newcommand{\subheading}[1]{\textbf{#1}}
+
+% Define environment for work experience
+\newenvironment{workexp}[3]{%
+  \noindent\subheading{#1,} \textit{#2}\hfill\textbf{#3}\par%
+}{\bigskip}
+
+% Define environment for education
+\newenvironment{education}[4]{%
+  \noindent
+  \textbf{#1,} \textit{#2}\hfill{#3,} {#4}%
+  \par
+}{\bigskip}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+	\textbf{\LARGE Ritesh Narkhede}\\
+	Pune, MH $\vert$ 
+	\href{tel:+919860069151}{\textbf{+91 9860069151}} $\vert$ \href{mailto:riteshn31@gmail.com}{\textbf{riteshn31@gmail.com}} $\vert$ \href{https://www.linkedin.com/in/ritesh-narkhede-79963a108}{\textbf{LinkedIn}} $\vert$
+    \href{https://riteshn31.github.io/}{\textbf{GitHub}}
+\end{center}
+
+\section*{Summary}
+
+\noindent
+\textbf{Dynamic Software Engineer with nearly 5 years of experience}, specializing in Agile methodologies and emerging technologies. Currently contributing to organizational success as a \textbf{Software Engineer at R1 RCM}. Proficient in C\#, .NET Core, ASP.NET, React, JavaScript, HTML, and CSS, with strong database management skills in Microsoft SQL Server and MongoDB. Experienced with testing tools such as Postman, Selenium, and JMeter, and adept in version control systems including GitLab, BitBucket, and GitHub.
+\medskip\\
+\noindent
+I excel in collaborative teamwork and individual ownership, adapting effectively to diverse team sizes and project requirements. Proficient in development environments like Visual Studio, JetBrains Rider, and VS Code, I streamline development processes to deliver efficient solutions. Committed to fostering organizational growth through innovation and ready to contribute effectively while staying adaptable to industry trends.
+
+\section*{Skills}
+\begin{itemize}[label=]
+	\item \textbf{Programming Languages:} C\#, JavaScript, SQL
+	\item \textbf{Backend Technologies:} .NET Core, ASP.NET, Web API, Microsoft Integration Services 
+	\item \textbf{Frontend Technologies:} React, HTML, CSS 
+	\item \textbf{Testing:} Selenium, JMeter, XUnit, Moq, NSubstitute, Cucumber, SpecFlow, Postman, Fiddler, XRay, Test Driven Development 
+	\item \textbf{Databases:} Microsoft SQL Server, MongoDB 
+	\item \textbf{Version Control Systems:} Gitlab, BitBucket, GitHub 
+	\item \textbf{Development Tools:} Visual Studio, JetBrains Rider, VS Code, GitBash, Chrome Developer Tools 
+	\item \textbf{Others:} Agile/Scrum, Kanban, Kibana, Grafana, Jira, AppDynamics, ServiceNow, Jenkins, SonarQube, XL Deploy, Octopus Deploy
+\end{itemize}
+
+\section*{Work Experience}
+\begin{workexp}{R1 RCM Global, Noida, India}{Software Engineer}{09/21 - Present}
+	\begin{itemize}[left=0pt, align=left]
+		\item \textbf{Spearheaded} the implementation of Account’s Notes
+		      History Summarization feature in R1-Decision and WFM
+		      applications, resulting in a \textbf{significant reduction} of
+		      \textbf{125,000 minutes per week} in account review time. This
+		      initiative led to an \textbf{estimated annual cost savings} of
+		      \textbf{\$560k} and \textbf{improved operational efficiency} and
+		      \textbf{user satisfaction}.
+		          
+		\item \textbf{Engineered} and \textbf{deployed algorithms} for account
+		      note filtering and processing, integrating REST APIs and
+		      \textbf{achieving recognition} for generic feature
+		      implementation in Account’s Notes History Summarization
+		      feature.
+		          
+		\item \textbf{Introduced} date-based navigation for historical
+		      account notes, \textbf{enhancing} operational workflows and
+		      \textbf{user productivity}.
+		          
+		\item \textbf{Implemented} data archiving for the Acute and
+		      Physician Work Flow Management (WFM) system,
+		      \textbf{optimizing storage utilization} and
+		      \textbf{reducing storage costs by making it configurable as per
+		      client requirements}.
+		          
+		\item \textbf{Led} the initiative to \textbf{scrub Protected Health Information (PHI) and Personally
+		Identifiable Information (PII) data}
+		from lower environments after backups,
+		\textbf{ensuring compliance} with data security regulations.
+		    
+		\item \textbf{Led} successful Proof of Concept (POC) and
+		      \textbf{implementation} to \textbf{decouple} DNN architecture
+		      for R1 Hub Enterprise Solution, streamlining development and
+		      \textbf{increasing agility}. \textbf{Secured recognition} for
+		      \textbf{innovative solution},
+		      \textbf{reduced change cycle duration} from quarterly to twice
+		      a month, \textbf{enhancing responsiveness} and
+		      \textbf{customer satisfaction}.
+		          
+		\item \textbf{Demonstrated versatility} and \textbf{adaptability} by
+		      \textbf{actively contributing} to a diverse range of projects,
+		      including R1-Decision, WFM applications, data archiving, and
+		      data security initiatives, while
+		      \textbf{collaborating effectively} with multidisciplinary
+		      teams to \textbf{achieve project objectives} and
+		      \textbf{deliver high-quality solutions}.
+	\end{itemize}
+\end{workexp}
+
+\begin{workexp}{Tripstack, Pune, India}{Software Engineer II}{06/19 - 09/21}
+	\begin{itemize}[left=0pt, align=left]
+		\item \textbf{Spearheaded} the integration of public fares from
+		      multiple airlines, including American Airlines, Aegean Air,
+		      Olympic Air, EasyJet, Ryanair, Spirit, Volaris, and others,
+		      into a single API using REST and Contractual APIs. This
+		      initiative \textbf{enhanced} the TripStack Virtual
+		      Interlining, TripStack API, Self-Connect for Airlines, and
+		      FareShare Caching product's flight content offering,
+		      \textbf{providing comprehensive flight content access, enhancing
+		      travel options,}
+		      and \textbf{enabling efficient retailing}
+		      of Virtual Interlining fares for airlines.
+		          
+		\item \textbf{Developed} and \textbf{implemented} Slack bots using C\#
+		      and Slack API methods to automate the process of updating
+		      flight booking verification status, resulting in a
+		      \textbf{reduction of manual effort}
+		      and \textbf{increased operational efficiency}.
+		          
+		\item \textbf{Engineered} code in C\# for creating and validating
+		      YAML routes for configuration as part of in-house automation
+		      initiatives, \textbf{streamlining the force-list generation process}
+		      for airline routes validation and
+		      \textbf{improving configuration efficiency}.
+		          
+		\item \textbf{Designed} and \textbf{developed} C\# code for a calendar
+		      project to check flight fare availability on given dates on
+		      airline websites, \textbf{optimizing cache performance}
+		      and \textbf{saving Innovata cost}.
+	\end{itemize}
+\end{workexp}
+
+% \section*{Languages}
+% English, Hindi, Marathi
+
+\section*{Education}
+\begin{education}{Bachelor of Engineering}{Information Technology}{Pune University}{2015 - 2019}
+\end{education}
+\begin{education}{Higher Secondary}{Information Technology}{Maharashtra Board}{2014 - 2015}
+\end{education}
+
+\end{document}
